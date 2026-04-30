@@ -43,10 +43,11 @@ body#page-home{
     align-items:center;
     justify-content:center;
     max-width:600px;
-    width:max-content;
+    width:100%;
 }
 
 .left-header{
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -71,7 +72,7 @@ body#page-home{
 
 .left-header h1{
     display: flex;
-    font-size:90px;
+    font-size: clamp(36px, 8vw, 90px);
     font-weight:450;
     letter-spacing:4px;
     color:#ffd236;
@@ -127,8 +128,7 @@ body#page-home{
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 100px;
+    gap: clamp(20px, 8vw, 100px);
     font-size: 20px;
     width: fit-content;
     height: fit-content;
@@ -195,13 +195,18 @@ body#page-home{
 
     .container{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "header"
             "image"
             "footer";
+        
         gap: 30px;
         text-align: center;
+    }
+
+    .left{
+        grid-column: 1/3;
     }
 
     .left-header{
@@ -210,6 +215,7 @@ body#page-home{
 
     .right{
         grid-area: image;
+        grid-column: 1/3;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -240,6 +246,8 @@ body#page-home{
         flex-wrap:wrap;
         gap:10px;
         bottom:20px;
+        line-height: 1;
+        
     }
 
     .dock a{
@@ -255,6 +263,7 @@ body#page-home{
         display:inline-block;
         font-size:26px;
     }
+
 }
 /* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
@@ -277,6 +286,118 @@ body#page-home{
 
 }
 
+/*-----------------------------------------------ABOUT PAGE-----------------------------------------------*/
+
+body#page-about{
+    margin: 0;
+    padding: 0;
+
+    background-image: url("images/Gingham-smaller.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.about-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto;
+    grid-template-areas:
+        "title title"
+        "p1 p2";
+
+    gap: 20px;
+    background-color: #a9c5c9;
+    opacity: 90%;
+    margin: 0 clamp(30px, 8vw, 150px);
+    min-height: 100vh;
+}
+
+
+.about-title{
+    grid-area: title;
+
+    font-size: clamp(36px, 8vw, 90px);
+    font-weight:1000;
+    letter-spacing:5px;
+    color:#ffd236;
+    text-shadow: 5px 7px #b7322a; 
+    text-align: center;
+    padding-top: 10%;
+}
+
+.about-p1{
+    grid-area: p1;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.6;
+    padding: 30px 30px 30px 50px;
+
+}
+
+.about-p2{
+    grid-area: p2;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.6;
+    padding: 30px 50px 30px 30px;
+
+}
+
+.about-p1,
+.about-p2{
+    line-height:1.6;
+    text-align: justify;
+
+}
+
+
+.about-dock{
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 8vw, 100px);
+    font-size: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+}
+
+.about-dock a{
+    text-decoration:none;
+    color:#959494;
+    font-weight:600;
+    letter-spacing:2px;
+
+    
+}
+
+.about-dock a.active{
+    color:#b7322a;
+    font-weight: 800;
+
+}
+
+
+.about-dock a:hover{
+    color:#ffd53c;
+    transform: scale(1.1);
+    
+}
+
+
+@media (max-width: 768px){
+
+    body#page-about{
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+}
 
 
 
