@@ -19,7 +19,6 @@ body#page-home{
 }
 
 .hero{
-    width: 100%;
     max-width: 100%;
     padding: 50px 100px 100px 100px;
     flex: 1;
@@ -31,21 +30,36 @@ body#page-home{
 }
 
 .container{
-    display: flex;
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 80px;
     align-items: center;
     justify-content: center;
-    gap: 80px;
 }
 
 .left{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    max-width:600px;
+    width:max-content;
+}
+
+.left-header{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.left-footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    width: 100%;
 }
 
-.left h2{
+.left-header h2{
     font-size:30px;
     font-weight:400;
     letter-spacing:2px;
@@ -55,7 +69,7 @@ body#page-home{
 
 }
 
-.left h1{
+.left-header h1{
     display: flex;
     font-size:90px;
     font-weight:450;
@@ -63,12 +77,11 @@ body#page-home{
     color:#ffd236;
     margin-bottom:25px;
     text-align: center;
+    justify-content: center;
 
 }
 
-.left p{
-    display: flex;
-    flex-direction: column;
+.left-footer p{
     font-size:30px;
     line-height:1.6;
     margin-bottom:25px;
@@ -94,19 +107,17 @@ body#page-home{
     display: block;
 }
 
-.right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
+.right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
 }
 
 .right img{
-    width: 80%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width:100%;
+    max-width:420px;
+    height:auto;
 }
 
 .dock{
@@ -116,9 +127,10 @@ body#page-home{
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 100px;
     font-size: 20px;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     padding: 10px;
 
@@ -142,6 +154,130 @@ body#page-home{
 .dock a:hover{
     color:#ffd236;
     transform: scale(1.1);
-    display: inline-block;
+    
 }
+
+/* hide icons on desktop */
+.dock-icon{
+  display: none;
+}
+
+.dock-text{
+  display: inline;
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 40px 50px 80px 50px;
+    }
+    
+    .container {
+        gap: 40px;
+    }
+    
+    .left h1 {
+        font-size: 70px;
+    }
+    
+    .left p {
+        font-size: 24px;
+    }
+    
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .hero{
+        padding: 30px 20px 60px 20px;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "image"
+            "footer";
+        gap: 30px;
+        text-align: center;
+    }
+
+    .left-header{
+        grid-area: header;
+    }
+
+    .right{
+        grid-area: image;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .left-footer{
+        grid-area: footer;
+    }
+
+    .left-header h2{
+        font-size:20px;
+    }
+
+    .left-header h1{
+        font-size:48px;
+    }
+
+    .left-footer p{
+        font-size:18px;
+    }
+
+    .github-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .dock{
+        flex-wrap:wrap;
+        gap:10px;
+        bottom:20px;
+    }
+
+    .dock a{
+        font-size:14px;
+        padding:8px 12px;
+    }
+
+    .dock-text{
+        display:none;
+    }
+
+    .dock-icon{
+        display:inline-block;
+        font-size:26px;
+    }
+}
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+
+    .left-header h1 {
+        font-size: 36px;
+    }
+
+    .left-footer p {
+        font-size: 16px;
+    }
+
+    .dock {
+        gap: 8px;
+    }
+
+    .dock a {
+        font-size: 12px;
+    }
+
+}
+
+
+
+
 
