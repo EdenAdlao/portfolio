@@ -439,10 +439,10 @@ body#page-about{
     .about-title{
         grid-area: title;
         padding: 20px 40px 40px 40px;
-        align-items: center;         /* vertical center */
-        justify-content: center;     /* horizontal center */
+        align-items: center;  
+        justify-content: center;     
         text-align: center;
-        min-height: 120px;           /* gives it space to center within */
+        min-height: 120px;           
         place-self: center;
         text-align: center;
         
@@ -498,6 +498,45 @@ body#page-about{
     }
 }
 
+/*-----------------------------------------------STACK PAGE-----------------------------------------------*/
 
 
+
+
+.stack-dock{
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 8vw, 100px);
+    font-size: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+}
+     
+.stack-dock a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stack-dock a.active{
+    color:#b7322a;
+    font-weight: 800;
+
+}
+
+
+.stack-dock a:hover{
+    color:#ffd53c;
+    transform: scale(1.1);
+    
+}
+.stack-dock .dock-icon{
+    display: none;
+}
 
