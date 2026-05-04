@@ -397,6 +397,8 @@ body#page-about{
     display: flex;
     align-items: center;
     gap: 6px;
+    color: #508686;
+    font-weight: 600;
 }
 
 .about-dock a.active{
@@ -496,11 +498,9 @@ body#page-about{
 /*-----------------------------------------------STACK PAGE-----------------------------------------------*/
 
 
-
-
 .stack-dock{
     position: fixed;
-    bottom: 100px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -512,26 +512,32 @@ body#page-about{
     padding: 10px;
 
 }
-     
-.stack-dock a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+
+.stack-dock a{
+    text-decoration:none;
+    color:#e3b2b2;
+    font-weight:600;
+    letter-spacing:2px;
+    text-align: center;
 }
 
 .stack-dock a.active{
-    color:#b7322a;
-    font-weight: 800;
-
+    color:white;
 }
 
-
 .stack-dock a:hover{
-    color:#ffd53c;
+    color:#ffd236;
     transform: scale(1.1);
     
 }
+
+/* hide icons on desktop */
 .stack-dock .dock-icon{
     display: none;
 }
+
+.dock-text{
+  display: inline;
+}
+
 
