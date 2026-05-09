@@ -12,14 +12,18 @@
 
 </head>
 
-<body id="page-about">
-    <section class="about-hero">
-        <h1 class = "about-title">ABOUT ME</h1>
-        <p class = "about-p1"> 
+<body id="page-about" class="font-[Poppins] min-h-screen flex flex-col">
+    <section class="about-panel min-h-screen w-[80%] mx-auto px-10 py-20 grid md:grid-cols-2 gap-12">
+
+        <h1 class="about-title md:col-span-2 text-center text-[clamp(36px,8vw,90px)] font-extrabold tracking-[5px]">
+            ABOUT ME
+        </h1>
+
+        <p class="text-justify text-[clamp(16px,2vw,20px)] leading-relaxed"> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
-        <p class = "about-p2"> 
+        <p class="text-justify text-[clamp(16px,2vw,20px)] leading-relaxed"> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
         </p>
@@ -28,29 +32,65 @@
 
 
 
+    <!-- NAVBAR -->
+    <div id="navbar"
+    class="fixed bottom-0 md:top-0 md:bottom-auto
+    left-0 w-full z-50
+    flex justify-around md:justify-center md:gap-10
+    px-6 py-3 md:h-16
+    backdrop-blur-md
+    border-t md:border-t-0 md:border-b border-white/10 navbar-about">
 
-    <div class="about-dock">
+        <!-- HOME -->
+        <a href="index.html"
+        class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
 
-            <a href="index.html">
-                <span class="material-symbols-outlined dock-icon">family_home</span>
-                <span class="dock-text">HOME</span>
-            </a>
+            <!-- ICON (mobile only) -->
+            <span class="material-symbols-outlined text-[26px] md:hidden ">
+                home
+            </span>
 
-            <a href="about.html" class="active">
-                <span class="material-symbols-outlined dock-icon">person_heart</span>
-                <span class="dock-text">ABOUT</span>
-            </a>
+            <!-- TEXT (desktop only) -->
+            <span class="hidden md:inline">
+                HOME
+            </span>
 
-            <a href="stack.html">
-                <span class="material-symbols-outlined dock-icon">code_blocks</span>
-                <span class="dock-text">STACK</span>
-            </a>
+        </a>
 
-            <a href="certifications.html">
-                <span class="material-symbols-outlined dock-icon">verified</span>
-                <span class="dock-text">CERTIFICATIONS</span>
-            </a>
+        <!-- ABOUT -->
+        <a href="about.html"
+        class="nav-link active about flex flex-col md:flex-row items-center gap-1 md:gap-2">
 
-        </div>
+            <span class="material-symbols-outlined text-[26px] md:hidden ">
+            person
+            </span>
+            <span class="hidden md:inline">ABOUT</span>
+
+        </a>
+
+        <!-- STACK -->
+        <a href="stack.html"
+        class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+            <span class="material-symbols-outlined text-[26px] md:hidden ">
+            code
+            </span>
+            <span class="hidden md:inline">STACK</span>
+
+        </a>
+
+        <!-- CERTIFICATIONS -->
+        <a href="certifications.html"
+        class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+            <span class="material-symbols-outlined text-[26px] md:hidden ">
+            verified
+            </span>
+            <span class="hidden md:inline">CERTIFICATIONS</span>
+
+        </a>
+
+    </div>
+
 </body>
 </html>

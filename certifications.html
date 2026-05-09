@@ -9,119 +9,168 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 
 </head>
-<body class="m-0 p-0 relative font-['Poppins'] bg-[url('images/cert-bg.png')] bg-cover bg-center bg-no-repeat bg-fixed text-white">
-  
-  <div class="fixed inset-0 pointer-events-none z-0
-  bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.3)_0%,rgba(255,255,255,0.2)_15%,rgba(255,255,255,0)_30%),radial-gradient(circle_at_center,rgba(0,0,0,0.17)_55%,rgba(0,0,0,0.78)_100%)]">
-</div>
-
-<div class="relative z-10">
-
-  <!-- NAVBAR -->
-  <div id="navbar"
-  class="fixed top-0 left-0 w-full z-50 tracking-widest flex justify-center gap-10 py-4 bg-[#1a270b]/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
-    <a href="index.html" class="text-white hover:text-[#ffd236] hover:scale-105 transition duration-200">HOME</a>
-    <a href="about.html" class="text-white hover:text-[#ffd236] hover:scale-105 transition duration-200">ABOUT</a>
-    <a href="stack.html" class="text-white hover:text-[#ffd236] hover:scale-105 transition duration-200">STACK</a>
-    <a href="certifications.html" class="text-[#ffd236] font-semibold">CERTIFICATIONS</a>
-
-  </div>
-
-
-    <section class="min-h-screen flex flex-col items-center justify-center px-6">
-
-      <!-- Title -->
-      <h1 class="text-center text-[28px] sm:text-[35px] md:text-[50px] font-medium tracking-[2px] text-[#ffd236]
-        drop-shadow-[0_5px_4px_rgba(0,0,0,0.5)] mb-10 md:mb-16">
-
-        MY CERTIFICATIONS
-      </h1>
+    <body class="m-0 p-0 relative font-['Poppins'] bg-[url('images/cert-bg.png')] bg-cover bg-center bg-no-repeat bg-fixed text-white">
     
-      <!-- Grid Container -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 lg:gap-20">
+    <div class="fixed inset-0 pointer-events-none z-0
+    bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.3)_0%,rgba(255,255,255,0.2)_15%,rgba(255,255,255,0)_30%),radial-gradient(circle_at_center,rgba(0,0,0,0.17)_55%,rgba(0,0,0,0.78)_100%)]">
+    </div>
+
+    <div class="relative z-10">
+
+    <!-- CERTIFICATIONS PAGE NAVBAR -->
+        <div id="navbar"
+        class="fixed bottom-0 md:top-0 md:bottom-auto
+        left-0 w-full z-50
+        flex justify-around md:justify-center md:gap-10
+        px-6 py-3 md:h-16
+        bg-[#1a270b]/80 backdrop-blur-md
+        border-t md:border-t-0 md:border-b border-white/10">
+
+            <!-- HOME -->
+            <a href="index.html"
+            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                home
+                </span>
+                <span class="hidden md:inline">HOME</span>
+
+            </a>
+
+            <!-- ABOUT -->
+            <a href="about.html"
+            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                person
+                </span>
+                <span class="hidden md:inline">ABOUT</span>
+
+            </a>
+
+            <!-- STACK -->
+            <a href="stack.html"
+            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                code
+                </span>
+                <span class="hidden md:inline">STACK</span>
+
+            </a>
+
+            <!-- CERTIFICATIONS -->
+            <a href="certifications.html"
+            class="nav-link active cert flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                verified
+                </span>
+                <span class="hidden md:inline">CERTIFICATIONS</span>
+
+            </a>
+
+        </div>
+
+    </div>  
+
+        <section class="min-h-screen flex flex-col items-center justify-center px-6">
+
+        <!-- Title -->
+        <h1 class="text-center text-[28px] sm:text-[35px] md:text-[50px] font-medium tracking-[2px] text-[#ffd236]
+            drop-shadow-[0_5px_4px_rgba(0,0,0,0.5)] mb-10 md:mb-16">
+
+            MY CERTIFICATIONS
+        </h1>
         
-    
-        <!-- Card 1 -->
-        <div class="bg-transparent hover:scale-105 transition duration-300 overflow-hidden rounded-xl hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
-          <img src="images/cert-frame-JAVA.svg"
-               onclick="openModal(this.src)"
-               alt="Java Certificate"
-               class="w-52 md:w-64 lg:w-72  mx-auto">
-          
-          <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
-             target="_blank"
-             class="block text-white text-center mt-1 font-medium">
-            Java Certificate
-          </a>
-        </div>
-    
-        <!-- Card 2 -->
-        <div class="bg-transparent hover:scale-105 transition duration-300 hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
-          <img src="images/cert-frame-WORD.svg"
-               onclick="openModal(this.src)"
-               alt="Word Certificate"
-               class="w-52 md:w-64 lg:w-72  mx-auto">
-    
-          <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
-               target="_blank"
-               class="block text-white text-center mt-1 font-medium">
-              Word Associate MS 365 Apps Certificate
-          </a>
-        </div>
-    
-        <!-- Card 3 -->
-        <div class="bg-transparent hover:scale-105 transition duration-300 hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
-          <img src="images/cert-frame-PPT.svg"
-               onclick="openModal(this.src)"
-               alt="PowerPoint Certificate"
-               class="w-52 md:w-64 lg:w-72  mx-auto">
-    
-          <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
-               target="_blank"
-               class="block text-white text-center mt-1 font-medium">
-              PowerPoint Associate MS 365 Apps Certificate
-          </a>        
-        </div>
-
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 lg:gap-20">
+            
         
-    
-      </div>
+            <!-- Card 1 -->
+            <div class="bg-transparent hover:scale-105 transition duration-300 overflow-hidden rounded-xl hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
+            <img src="images/cert-frame-JAVA.svg"
+                onclick="openModal(this.src)"
+                alt="Java Certificate"
+                class="w-52 md:w-64 lg:w-72  mx-auto">
+            
+            <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
+                target="_blank"
+                class="block text-white text-center mt-1 font-medium">
+                Java Certificate
+            </a>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="bg-transparent hover:scale-105 transition duration-300 hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
+            <img src="images/cert-frame-WORD.svg"
+                onclick="openModal(this.src)"
+                alt="Word Certificate"
+                class="w-52 md:w-64 lg:w-72  mx-auto">
+        
+            <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
+                target="_blank"
+                class="block text-white text-center mt-1 font-medium">
+                Word Associate MS 365 Apps Certificate
+            </a>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="bg-transparent hover:scale-105 transition duration-300 hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
+            <img src="images/cert-frame-PPT.svg"
+                onclick="openModal(this.src)"
+                alt="PowerPoint Certificate"
+                class="w-52 md:w-64 lg:w-72  mx-auto">
+        
+            <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
+                target="_blank"
+                class="block text-white text-center mt-1 font-medium">
+                PowerPoint Associate MS 365 Apps Certificate
+            </a>        
+            </div>
 
-      <div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
-        <img id="modalImg" class="max-w-3xl w-full rounded-lg">
-      </div>
+            
+        
+        </div>
 
-    </section>
+        <div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
+            <img id="modalImg" class="max-w-3xl w-full rounded-lg">
+        </div>
+
+        </section>
 
 
 
 
 
 
-   <script>
-      function openModal(src) {
-        document.getElementById('modal').classList.remove('hidden');
-        document.getElementById('modalImg').src = src;
-      }
-
-      document.getElementById('modal').onclick = function () {
-        this.classList.add('hidden');
-      }
-
-      const navbar = document.getElementById("navbar");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 10) {
-          navbar.classList.add("shadow-[0_0_25px_rgba(34,197,94,0.4)]", "bg-[#0b2e1a]/90");
-        } else {
-          navbar.classList.remove("shadow-[0_0_25px_rgba(34,197,94,0.4)]", "bg-[#0b2e1a]/90");
+    <script>
+        function openModal(src) {
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modalImg').src = src;
         }
-      });
-   </script>
-</body>
+
+        document.getElementById('modal').onclick = function () {
+            this.classList.add('hidden');
+        }
+
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) {
+            navbar.classList.add("shadow-[0_0_25px_rgba(34,197,94,0.4)]", "bg-[#0b2e1a]/90");
+            } else {
+            navbar.classList.remove("shadow-[0_0_25px_rgba(34,197,94,0.4)]", "bg-[#0b2e1a]/90");
+            }
+        });
+    </script>
+    </body>
 </html>
