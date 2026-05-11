@@ -360,49 +360,33 @@ text-shadow:
 }
 
 /*-----------------------------------------------STACK PAGE-----------------------------------------------*/
-
-
-.stack-dock{
-    position: fixed;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: clamp(20px, 8vw, 100px);
-    font-size: 20px;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-
-}
-
-.stack-dock a{
-    text-decoration:none;
-    color:#e3b2b2;
-    font-weight:600;
-    letter-spacing:2px;
-    text-align: center;
-}
-
-.stack-dock a.active{
-    color:white;
-}
-
-.stack-dock a:hover{
-    color:#ffd236;
-    transform: scale(1.1);
+#page-stack{
+    background-color:#ffbee4;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
     
 }
 
-/* hide icons on desktop */
-.stack-dock .dock-icon{
-    display: none;
+#page-stack #navbar{
+    background-color:#4c81c8;
 }
 
-.dock-text{
-  display: inline;
+.nav-link.active.stack{
+color:#ffbee4;
+font-weight:800;
 }
+
+/* Title */
+.stack-title {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
 
 /*----------------------------------------------CERTIFICATIONS------------------------------------------------*/
 

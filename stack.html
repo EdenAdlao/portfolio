@@ -8,37 +8,222 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
 </head>
-<body id="page-stack">
+
+<body id="page-stack" class="m-0 p-0 pt-24 md:pt-28 relative font-['Poppins']">
     
-    <section class="stack-hero">
+    
 
+    <div id="navbar"
+        class="fixed bottom-0 md:top-0 md:bottom-auto
+        left-0 w-full z-50
+        flex justify-around md:justify-center md:gap-10
+        px-6 py-3 md:h-16
+        backdrop-blur-md
+        border-t md:border-t-0 md:border-b border-white/10">
 
+            <!-- HOME -->
+            <a href="index.html"
+            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
 
-    </section>
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                home
+                </span>
+                <span class="hidden md:inline">HOME</span>
 
-    <div class="stack-dock">
+            </a>
 
-        <a href="index.html" >
-            <span class="material-symbols-outlined dock-icon">family_home</span>
-            <span class="dock-text">HOME</span>
-        </a>
+            <!-- ABOUT -->
+            <a href="about.html"
+            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
 
-        <a href="about.html">
-            <span class="material-symbols-outlined dock-icon">person_heart</span>
-            <span class="dock-text">ABOUT</span>
-        </a>
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                person
+                </span>
+                <span class="hidden md:inline">ABOUT</span>
 
-        <a href="stack.html" class="active">
-            <span class="material-symbols-outlined dock-icon">code_blocks</span>
-            <span class="dock-text">STACK</span>
-        </a>
+            </a>
 
-        <a href="certifications.html">
-            <span class="material-symbols-outlined dock-icon">verified</span>
-            <span class="dock-text">CERTIFICATIONS</span>
-        </a>
+            <!-- STACK -->
+            <a href="stack.html"
+            class="nav-link active stack flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                code
+                </span>
+                <span class="hidden md:inline">STACK</span>
+
+            </a>
+
+            <!-- CERTIFICATIONS -->
+            <a href="certifications.html"
+            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+
+                <span class="material-symbols-outlined text-[26px] md:hidden">
+                verified
+                </span>
+                <span class="hidden md:inline">CERTIFICATIONS</span>
+
+            </a>
 
     </div>
+
+
+    <!-- Title -->
+    <h1 class="text-center text-[40px] sm:text-[35px] md:text-[50px] font-medium tracking-[2px] text-[#4c81c8]
+             mb-10 md:mb-16 ">
+        MY STACK
+    </h1>
+
+
+
+    <!-- STACK GRID -->
+    <div class="max-w-xl mx-auto px-6 pb-32 md:pb-10">
+
+        <div class="grid
+            grid-flow-row
+            grid-cols-2
+            md:grid-cols-3
+            lg:grid-cols-4
+            justify-center
+            gap-4
+            ">
+            
+
+            <!-- HTML -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-html.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- CSS -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-css.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- JavaScript -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-javascript.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- C -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-c.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- Java -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-java.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- Python -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-python.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- SQL Server -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-sql-server.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- MySQL -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-my-sql.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- PostgreSQL -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-postgre.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- SQLite -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-sqlite.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- MongoDB -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-mongodb.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- Node -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-node-js.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- Git -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-git.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- Github -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-github.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- VS Code -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-vs-code.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+            <!-- Android Studio -->
+            <div class="flex items-center justify-center">
+                <img src="stack-icons/stack-android-studio.svg"
+                    class="w-auto h-auto max-h-24 md:max-h-28
+                    transition-all duration-300 
+                    hover:scale-110">
+            </div>
+
+        </div>
+
+    </div>
+
+    
 </body>
 </html>
