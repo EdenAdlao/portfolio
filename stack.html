@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eden Adlao | Tech Stack</title>
+    <title>My Stack | Eden Adlao</title>
     <link rel="stylesheet" href="styles.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,8 +12,7 @@
 
 </head>
 
-<body id="page-stack" class="m-0 p-0 pt-24 md:pt-28 relative font-['Poppins']">
-    
+<body id="page-stack" class="m-0 p-0 relative font-['Poppins']">
     
 
     <div id="navbar"
@@ -21,7 +20,7 @@
         left-0 w-full z-50
         flex justify-around md:justify-center md:gap-10
         px-6 py-3 md:h-16
-        backdrop-blur-md
+        bg-[#1a270b]/80 backdrop-blur-md
         border-t md:border-t-0 md:border-b border-white/10">
 
             <!-- HOME -->
@@ -70,12 +69,19 @@
 
     </div>
 
+    <section class="pt-32 ">
+        <h1 class="stack-title
+            text-center
+            text-[28px] sm:text-[35px] md:text-[50px]
+            font-medium
+            tracking-[2px]
+            text-[#ffd236]
+            drop-shadow-[0_5px_4px_rgba(0,0,0,0.5)]
+            mb-10 md:mb-16">
 
-    <!-- Title -->
-    <h1 class="text-center text-[40px] sm:text-[35px] md:text-[50px] font-medium tracking-[2px] text-[#4c81c8]
-             mb-10 md:mb-16 ">
-        MY STACK
-    </h1>
+            MY STACK
+        </h1>
+    </section>
 
 
 
@@ -89,27 +95,31 @@
             lg:grid-cols-4
             justify-center
             gap-4
+            justify-items-center
+            items-center
             ">
             
 
             <!-- HTML -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-html.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
-                    transition-all duration-300 
-                    hover:scale-110">
+                    transition-all ease-in-out  
+                    hover:scale-110
+                    ">
+                
             </div>
 
             <!-- CSS -->
-            <div class="flex items-center justify-center">
-                <img src="stack-icons/stack-css.svg"
+            <div class="icon-frame">
+                <img src="stack-icons/stack-css (1).svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
                     hover:scale-110">
             </div>
 
             <!-- JavaScript -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-javascript.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -117,15 +127,16 @@
             </div>
 
             <!-- C -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-c.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
                     hover:scale-110">
+                
             </div>
 
             <!-- Java -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-java.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -133,7 +144,7 @@
             </div>
 
             <!-- Python -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-python.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -141,7 +152,7 @@
             </div>
 
             <!-- SQL Server -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-sql-server.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -149,7 +160,7 @@
             </div>
 
             <!-- MySQL -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-my-sql.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -157,7 +168,7 @@
             </div>
 
             <!-- PostgreSQL -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-postgre.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -165,7 +176,7 @@
             </div>
 
             <!-- SQLite -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-sqlite.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -173,7 +184,7 @@
             </div>
 
             <!-- MongoDB -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-mongodb.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -181,7 +192,7 @@
             </div>
 
             <!-- Node -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-node-js.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -189,7 +200,7 @@
             </div>
 
             <!-- Git -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-git.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -197,7 +208,7 @@
             </div>
 
             <!-- Github -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-github.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -205,7 +216,7 @@
             </div>
 
             <!-- VS Code -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-vs-code.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 
@@ -213,7 +224,7 @@
             </div>
 
             <!-- Android Studio -->
-            <div class="flex items-center justify-center">
+            <div class="icon-frame">
                 <img src="stack-icons/stack-android-studio.svg"
                     class="w-auto h-auto max-h-24 md:max-h-28
                     transition-all duration-300 

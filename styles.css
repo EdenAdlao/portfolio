@@ -8,15 +8,139 @@
 
 }
 
-body#page-home{
-    display: flex;
-    flex-direction: column;
+body{
     min-height: 100vh;
-    background: radial-gradient(circle at 50% 25%, #9b3635 0%, #831616 40%, #5c0808 70%, #2c0404 100%);
     color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,255,255,0.18) 0%,
+            rgba(255,255,255,0.08) 18%,
+            rgba(255,255,255,0) 35%
+        ),
+
+        radial-gradient(
+            circle at center,
+            rgba(0,0,0,0) 45%,
+            rgba(0,0,0,0.45) 100%
+        ),
+
+        #1a270b;
+
+    background-attachment: fixed;
+}
+
+#navbar,
+.dock{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 14px 24px;
+
+    background: rgba(26, 39, 11, 0.8);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.25);
+}
+
+/* DESKTOP */
+@media (min-width: 768px){
+
+    #navbar,
+    .dock{
+        top: 0;
+        bottom: auto;
+
+        justify-content: center;
+        gap: 60px;
+
+        border-top: none;
+
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 767px){
+
+    #navbar,
+    .dock{
+        bottom: 0;
+        top: auto;
+    }
+}
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-link,
+.dock a{
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    transition: all 0.25s ease;
+
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 6px;
 }
+
+/* HOVER */
+
+.nav-link:hover,
+.dock a:hover{
+    color: #ffd236;
+    transform: scale(1.08);
+}
+
+/* ACTIVE PAGE */
+
+.nav-link.active,
+.dock a.active{
+    color: #ffd236;
+}
+
+/* ICONS */
+
+.dock-icon,
+.material-symbols-outlined{
+    font-size: 26px;
+}
+
+/* MOBILE TEXT HIDE */
+
+@media (max-width: 768px){
+
+    .dock-text{
+        display: none;
+    }
+
+    .nav-link span:not(.material-symbols-outlined){
+        display: none;
+    }
+}
+
+
+
+
 
 .hero{
     max-width: 100%;
@@ -121,7 +245,7 @@ body#page-home{
     fill:#ffd53c;
 }
 .github-icon{
-    fill: #e3b2b2;
+    fill: #ffffff;
     width: 50px;
     height: 50px;
     display: block;
@@ -129,47 +253,7 @@ body#page-home{
 
 
 
-.dock{
-    position: fixed;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: clamp(20px, 8vw, 100px);
-    font-size: 20px;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
 
-}
-
-.dock a{
-    text-decoration:none;
-    color:#e3b2b2;
-    font-weight:600;
-    letter-spacing:2px;
-    text-align: center;
-}
-
-.dock a.active{
-    color:white;
-}
-
-.dock a:hover{
-    color:#ffd236;
-    transform: scale(1.1);
-    
-}
-
-/* hide icons on desktop */
-.dock .dock-icon{
-    display: none;
-}
-
-.dock-text{
-  display: inline;
-}
 
 @media (max-width: 1024px) {
     
@@ -260,28 +344,7 @@ body#page-home{
         height:auto;
     }
 
-    .dock{
-        flex-wrap:nowrap;
-        bottom:20px;
-        line-height: 1;
-        
-        
-    }
-
-    .dock a{
-        font-size:14px;
-        padding:8px 12px;
-    }
-
-    .dock .dock-text{
-        display:none;
-    }
-
-    .dock .dock-icon{
-        display:inline-block;
-        font-size:26px;
-    }
-
+    
 }
 /* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
@@ -294,99 +357,40 @@ body#page-home{
         font-size: 16px;
     }
 
-    .dock {
-        gap: 8px;
-    }
-
-    .dock a {
-        font-size: 12px;
-    }
-
 }
 
 /*-----------------------------------------------ABOUT PAGE-----------------------------------------------*/
-#page-about{
-background-image:url("images/Gingham-smaller.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-}
 
-/* PANEL COLOR */
-
-.about-panel{
-background:rgba(169,197,201,0.9);
-}
 
 /* TITLE STYLE */
 
-.about-title{
-color:#ffd236;
-text-shadow:5px 7px #b7322a;
-}
 
-/* NAVBAR BACKGROUND */
 
-.navbar-about{
-background:#ffd236;
-}
-
-/* DEFAULT NAV ITEMS */
-
-.nav-link{
-color:white;
-font-weight:600;
-letter-spacing:2px;
-transition:all 0.25s ease;
-}
-
-/* ACTIVE PAGE */
-
-.nav-link.active.about{
-color:#b7322a;
-font-weight:800;
-}
-
-/* HOVER EFFECT */
-
-.nav-link:hover{
-transform:scale(1.15);
-
-text-shadow:
-0 0 5px white,
-0 0 10px white,
-0 0 20px #ffd236;
-}
 
 /*-----------------------------------------------STACK PAGE-----------------------------------------------*/
-#page-stack{
-    background-color:#ffbee4;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    
+
+.icon-frame{
+    width: 70px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c89a4c;
+    border-radius: 60px 60px 0 0px;
+    padding: 15px 10px 10px 10px;
+    box-shadow: inset 0 0 0 10px #e0c746;
+    transition: transform 0.3s ease;
 }
 
-#page-stack #navbar{
-    background-color:#4c81c8;
+.icon-frame img{
+    width: 70%;
+    height: auto;
 }
 
-.nav-link.active.stack{
-color:#ffbee4;
-font-weight:800;
+.icon-frame:hover{
+    transform: translateY(-6px);
 }
-
-/* Title */
-.stack-title {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 2rem;
-    position: relative;
-    z-index: 1;
-}
-
 
 /*----------------------------------------------CERTIFICATIONS------------------------------------------------*/
 
@@ -452,6 +456,5 @@ font-weight:800;
     opacity: 0.5;
     transform: scale(0.85);
 }
-
 
 
