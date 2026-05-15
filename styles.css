@@ -16,32 +16,81 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* PROFILE BORDER */
+/* MAIN WRAPPER */
 .profile-border {
-    background: linear-gradient(to right, #fdbfb5, #edabc9, #d3c8e3, #9ec9ec);
+    position: relative;
+    border-radius: 50%;
+
+    /* floating */
+    animation: float 4s ease-in-out infinite;
+
+    /* subtle white glow */
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.15);
 }
 
-.home-text {
-    color: #ffffff/10;
+/* ROTATING GRADIENT RING */
+.profile-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        45deg,
+        #fdbfb5,
+        #edabc9,
+        #d6b5d4,
+        #9ec9ec
+    );
+
+    animation: spin 3s linear infinite;
+
+    z-index: 0;
 }
 
-/* BASE ICON */
-.github-icon img {
-    transition: all 0.3s ease;
+/* INNER CONTENT */
+.profile-border > div {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
 }
 
-/* white glow + smooth transition */
-.github-icon svg {
-    filter: drop-shadow(0 0 0px rgba(255,255,255,0));
+/* IMAGE */
+.profile-border img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* hover effect */
-.github-icon:hover svg {
-    filter:
-        drop-shadow(0 0 6px rgba(255,255,255,0.6))
-        drop-shadow(0 0 12px rgba(255,255,255,0.4));
+/* ROTATION */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
+/* FLOATING */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
 /* ABOUT TEXT */
 .about-text {
