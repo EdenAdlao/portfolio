@@ -6,68 +6,368 @@
     <title>Eden Adlao | Web Portfolio</title>
     
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
   </head>
   
-  <body id="page-home">
+  <body class="main-bg text-white min-h-screen overflow-hidden">
 
-    <section class="hero">
+    <!-- NAVBAR -->
+    <nav class="w-full">
 
-        <div class="container">
-            <div class="left-header">
-                <h2>HI! I'M</h2>
-                <h1>EDEN ADLAO</h1>
+        <div class="max-w-7xl
+                    mx-auto
+                    px-6
+                    md:px-12
+                    py-5
+                    flex
+                    items-center
+                    justify-between">
+
+            <!-- LOGO -->
+            <h1 class="hidden md:block text-lg font-semibold tracking-[6px]
+                    text-[#d6b5d4]
+                    drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
+
+                EDEN ADLAO
+
+            </h1>
+
+            <!-- DESKTOP LINKS -->
+            <div class="hidden md:flex items-center gap-10">
+
+                <a href="index.html"
+                class="text-white/70 hover:text-[#fdbfb5]
+                        hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
+                        transition-all duration-300">
+                    HOME
+                </a>
+
+                <a href="about.html"
+                class="text-white/70 hover:text-[#edabc9]
+                        hover:drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]
+                        transition-all duration-300">
+                    ABOUT
+                </a>
+
+                <a href="stack.html"
+                class="text-white/70 hover:text-[#d6b5d4]
+                        hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
+                        transition-all duration-300">
+                    STACK
+                </a>
+
+                <a href="certifications.html"
+                class="text-white/70 hover:text-[#9ec9ec]
+                        hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
+                        transition-all duration-300">
+                    CERTIFICATIONS
+                </a>
+
             </div>
 
-            <div class="right">
-                <img src="images/portrait.png" alt="portrait-image">
-            </div>
-
-            <div class="left-footer">
-                <p>
-                    Aspiring to become a Front-End Developer, passionate about creating clean, user-friendly, and visually engaging web experiences.
-                </p>
-
-                <div class="github">
-                    <a href="https://github.com/EdenAdlao" target = "_blank">
-
-                        <svg class="github-icon" viewBox="0 0 24 24">
-                            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.2c-3.25.7-3.94-1.56-3.94-1.56-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.74 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.59-.3-5.31-1.3-5.31-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.83 0c2.22-1.5 3.2-1.2 3.2-1.2.63 1.65.23 2.87.11 3.17.74.82 1.2 1.87 1.2 3.15 0 4.51-2.73 5.49-5.33 5.78.42.36.79 1.08.79 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                        </svg>
-
-                    </a>
-                </div>
-            </div>
         </div>
 
-        <div class="dock">
+        <!-- 🌈 DESKTOP GRADIENT LINE (BOTTOM) -->
+        <div class="hidden md:block h-[3px]
+                    w-full
+                    bg-gradient-to-r
+                    from-[#fdbfb5]
+                    via-[#edabc9]
+                    via-[#d6b5d4]
+                    to-[#9ec9ec]">
+        </div>
 
-            <a href="index.html" class="active">
-                <span class="material-symbols-outlined dock-icon">family_home</span>
-                <span class="dock-text">HOME</span>
+    </nav>
+
+
+    <!-- ========================= -->
+    <!-- MOBILE BOTTOM NAV -->
+    <!-- ========================= -->
+    <div class="fixed bottom-0 left-0 w-full md:hidden
+                bg-[#0b1027]/90 backdrop-blur-lg
+                border-t border-white/10
+                flex flex-col z-50">
+
+        <!-- 🌈 MOBILE GRADIENT LINE (TOP OF NAV) -->
+        <div class="h-[3px]
+                    w-full
+                    bg-gradient-to-r
+                    from-[#fdbfb5]
+                    via-[#edabc9]
+                    via-[#d6b5d4]
+                    to-[#9ec9ec]">
+        </div>
+
+        <!-- ICONS -->
+        <div class="flex justify-around items-center py-3">
+
+            <a href="index.html"
+            class="text-white/70 hover:text-[#fdbfb5]
+                    hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    home
+                </span>
+
             </a>
 
-            <a href="about.html">
-                <span class="material-symbols-outlined dock-icon">person_heart</span>
-                <span class="dock-text">ABOUT</span>
+            <a href="about.html"
+            class="text-white/70 hover:text-[#edabc9]
+                    hover:drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    person_3
+                </span>
+
             </a>
 
-            <a href="stack.html">
-                <span class="material-symbols-outlined dock-icon">code_blocks</span>
-                <span class="dock-text">STACK</span>
+            <a href="stack.html"
+            class="text-white/70 hover:text-[#d6b5d4]
+                    hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    code_blocks
+                </span>
+
             </a>
 
-            <a href="certifications.html">
-                <span class="material-symbols-outlined dock-icon">verified</span>
-                <span class="dock-text">CERTIFICATIONS</span>
+            <a href="certifications.html"
+            class="text-white/70 hover:text-[#9ec9ec]
+                    hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    workspace_premium
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl
+                    mx-auto
+                    px-6
+                    md:px-12
+                    pt-16
+                    md:pt-24
+                    min-h-[85vh]
+
+                    grid
+                    grid-cols-1
+                    lg:grid-cols-2
+                    lg:grid-rows-2
+
+                    gap-y-10
+                    lg:gap-x-10
+
+                    items-center">
+
+        <!-- ========================= -->
+        <!-- UPPER LEFT -->
+        <!-- ========================= -->
+        <div class="order-1
+                    lg:order-none
+
+                    text-center
+                    lg:text-left
+
+                    flex
+                    flex-col
+                    items-center
+                    lg:items-start
+
+                    lg:self-end">
+
+            <p class="home-text
+                    uppercase
+                    tracking-[7px]
+                    text-2xl
+                    md:text-3xl
+                    mb-6">
+
+                Hi, I am
+
+            </p>
+
+            <h2 class="relative
+                    inline-block
+
+                    text-5xl
+                    sm:text-4xl
+                    md:text-7xl
+
+                    font-bold
+                    leading-none
+
+                    hero-gradient">
+
+                <!-- Glow -->
+                <span class="absolute
+                            inset-0
+                            -z-10
+                            select-none
+                            blur-2xl
+                            opacity-70
+                            bg-clip-text
+                            text-transparent
+                            bg-[linear-gradient(to_right,#fdbfb5,#edabc9,#d3c8e3,#9ec9ec)]"
+                    aria-hidden="true">
+
+                    EDEN ADLAO
+
+                </span>
+
+                <!-- Main Text -->
+                EDEN ADLAO
+
+            </h2>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- RIGHT SIDE IMAGE -->
+        <!-- ========================= -->
+        <div class="order-2
+                    lg:order-none
+
+                    lg:row-span-2
+
+                    flex
+                    justify-center
+                    lg:justify-end">
+
+            <div class="profile-border
+                        w-[260px]
+                        h-[260px]
+
+                        sm:w-[320px]
+                        sm:h-[320px]
+
+                        md:w-[360px]
+                        md:h-[360px]
+
+                        rounded-full
+                        p-[5px]">
+
+                <div class="w-full
+                            h-full
+                            rounded-full
+                            overflow-hidden
+                            bg-white">
+
+                    <img src="images/profile-pic.jpg"
+                        alt="Profile"
+                        class="w-full
+                                h-full
+                                object-cover">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- LOWER LEFT -->
+        <!-- ========================= -->
+        <div class="order-3
+                    lg:order-none
+
+                    text-center
+                    lg:text-left
+
+                    flex
+                    flex-col
+                    items-center
+                    lg:items-start
+
+                    lg:self-start">
+
+            <!-- CAPTION -->
+            <p class="text-white/70
+
+                    text-base
+                    sm:text-lg
+                    md:text-xl
+
+                    leading-7
+                    md:leading-8
+
+                    max-w-xl
+                    md:max-w-2xl
+
+                    mb-8
+                    md:mb-10">
+
+                Aspiring to become a front-end developer,
+                passionate about creating clean,
+                user-friendly, and visually engaging
+                web experiences.
+
+            </p>
+
+            <!-- GITHUB -->
+            <a href="https://github.com/"
+            target="_blank"
+            class="group github-icon inline-block">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16
+                            transition-all duration-300
+                            group-hover:scale-110
+                            group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+
+                    <defs>
+                        <linearGradient id="githubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#fdbfb5"/>
+                            <stop offset="50%" stop-color="#edabc9"/>
+                            <stop offset="100%" stop-color="#9ec9ec"/>
+                        </linearGradient>
+                    </defs>
+
+                    <path
+                        fill="currentColor"
+                        class="group-hover:fill-[url(#githubGrad)] transition-all duration-300"
+                        d="M12 2C6.477 2 2 6.484 2 12.017
+                        c0 4.425 2.865 8.18 6.839 9.504
+                        .5.092.682-.217.682-.483
+                        0-.237-.009-.866-.014-1.7
+                        -2.782.605-3.369-1.344-3.369-1.344
+                        -.455-1.158-1.11-1.466-1.11-1.466
+                        -.908-.62.069-.608.069-.608
+                        1.004.07 1.532 1.032 1.532 1.032
+                        .892 1.53 2.341 1.088 2.91.832
+                        .092-.647.35-1.088.636-1.338
+                        -2.22-.253-4.555-1.113-4.555-4.951
+                        0-1.093.39-1.988 1.029-2.688
+                        -.103-.253-.446-1.272.098-2.65
+                        0 0 .84-.27 2.75 1.026
+                        A9.564 9.564 0 0112 6.844
+                        c.85.004 1.705.115 2.504.337
+                        1.909-1.296 2.747-1.027 2.747-1.027
+                        .546 1.379.202 2.398.1 2.651
+                        .64.7 1.028 1.595 1.028 2.688
+                        0 3.848-2.339 4.695-4.566 4.943
+                        .359.309.678.92.678 1.855
+                        0 1.338-.012 2.419-.012 2.747
+                        0 .268.18.58.688.481A10.019 10.019 0 0022 12.017
+                        C22 6.484 17.523 2 12 2z"/>
+                </svg>
+
             </a>
 
         </div>
 
     </section>
-
-    <script src="script.js"></script>
   </body>
 </html>
