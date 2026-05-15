@@ -39,7 +39,7 @@ body {
 
     background: linear-gradient(
         45deg,
-        #fdbfb5,
+        #fbcabb,
         #edabc9,
         #d6b5d4,
         #9ec9ec
@@ -105,8 +105,8 @@ body {
 /* GRADIENT RING */
 .stack-ring {
     background: linear-gradient(
-        135deg,
-        #fdbfb5,
+        45deg,
+        #fbcabb,
         #edabc9,
         #d6b5d4,
         #9ec9ec
@@ -156,4 +156,239 @@ body {
             rotateY(360deg);
     }
 
+}
+
+/*------------------------------CERTIFICATIONS PAGE------------------------------*/
+
+
+
+.cert-card:hover{
+    transform: translateY(-10px);
+}
+
+/* ========================= */
+/* IMAGE CONTAINER */
+/* ========================= */
+
+.cert-img-bg{
+    position: relative;
+
+    padding: 0;
+
+    width: 100%;
+
+    cursor: pointer;
+}
+
+/* OFFSET LAYER */
+
+.cert-img-bg::after{
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+}
+
+/* IMAGE */
+
+.cert-img-bg img{
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    transition: 0.35s ease;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.35);
+}
+
+/* IMAGE HOVER */
+
+.cert-img-bg:hover img{
+    transform: scale(1.03);
+}
+
+/* IMAGE CLICK ENLARGE */
+
+.cert-img-bg img:active{
+    transform: scale(1.18);
+    z-index: 50;
+}
+
+/* ========================= */
+/* WORD */
+/* ========================= */
+
+.cert-word::after{
+    background: linear-gradient(
+        to bottom,
+        #fbcabb,
+        #ec9cb4
+    );
+}
+
+/* ========================= */
+/* PPT */
+/* ========================= */
+
+.cert-ppt::after{
+    background: linear-gradient(
+        to bottom,
+        #ec9cb4,
+        #bfb0d3
+    );
+}
+
+/* ========================= */
+/* JAVA */
+/* ========================= */
+
+.cert-java::after{
+    background: linear-gradient(
+        to bottom,
+        #a88fcc,
+        #89bce5
+    );
+}
+
+
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.copy-btn{
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.verify-btn{
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    border-radius: 18px;
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+/* VERIFY HOVER */
+
+.verify-btn:hover{
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.35);
+}
+
+/* ========================= */
+/* WORD BUTTONS */
+/* ========================= */
+
+.copy-word{
+    color: #fbcabb;
+
+    box-shadow:
+        0 0 0 2px #fbcabb;
+}
+
+.copy-word:hover{
+    background: linear-gradient(
+        to bottom,
+        #fbcabb,
+        #ec9cb4
+    );
+
+    color: #070b1d;
+}
+
+.verify-word{
+    background: linear-gradient(
+        to bottom,
+        #fbcabb,
+        #ec9cb4
+    );
+}
+
+/* ========================= */
+/* PPT BUTTONS */
+/* ========================= */
+
+.copy-ppt{
+    color: #ec9cb4;
+
+    box-shadow:
+        0 0 0 2px #ec9cb4;
+}
+
+.copy-ppt:hover{
+    background: linear-gradient(
+        to bottom,
+        #ec9cb4,
+        #bfb0d3
+    );
+
+    color: #070b1d;
+}
+
+.verify-ppt{
+    background: linear-gradient(
+        to bottom,
+        #ec9cb4,
+        #bfb0d3
+    );
+}
+
+/* ========================= */
+/* JAVA BUTTONS */
+/* ========================= */
+
+.copy-java{
+    color: #89bce5;
+
+    box-shadow:
+        0 0 0 2px #89bce5;
+}
+
+.copy-java:hover{
+    background: linear-gradient(
+        to bottom,
+        #a88fcc,
+        #89bce5
+    );
+
+    color: #070b1d;
+}
+
+.verify-java{
+    background: linear-gradient(
+        to bottom,
+        #a88fcc,
+        #89bce5
+    );
 }

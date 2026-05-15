@@ -8,170 +8,414 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 
 </head>
 
-<body class="m-0 p-0 relative font-['Poppins'] bg-[url('images/cert-bg.png')] bg-cover bg-center bg-no-repeat bg-fixed text-white">
+<body class="main-bg text-white min-h-screen pb-24 md:pb-0 overflow-x-hidden">
     
-    <div class="fixed inset-0 pointer-events-none z-0
-    bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.3)_0%,rgba(255,255,255,0.2)_15%,rgba(255,255,255,0)_30%),radial-gradient(circle_at_center,rgba(0,0,0,0.17)_55%,rgba(0,0,0,0.78)_100%)]">
+
+    <!-- NAVBAR -->
+    <nav class="w-full">
+
+        <div class="max-w-7xl
+                    mx-auto
+                    px-6
+                    md:px-12
+                    py-5
+                    flex
+                    items-center
+                    justify-between">
+
+            <!-- LOGO -->
+            <h1 class="hidden md:block text-lg font-semibold tracking-[6px]
+                    text-[#d6b5d4]
+                    drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
+
+                EDEN ADLAO
+
+            </h1>
+
+            <!-- DESKTOP LINKS -->
+            <div class="hidden md:flex items-center gap-10">
+
+                <a href="index.html"
+                class="text-white/70 hover:text-[#fdbfb5]
+                        hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
+                        transition-all duration-300">
+                    HOME
+                </a>
+
+                <a href="about.html"
+                class="text-white/70 hover:text-[#edabc9]
+                        hover:drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]
+                        transition-all duration-300">
+                    ABOUT
+                </a>
+
+                <a href="stack.html"
+                class="text-white/70 hover:text-[#d6b5d4]
+                        hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
+                        transition-all duration-300">
+                    STACK
+                </a>
+
+                <a href="certifications.html"
+                class="text-white/70 hover:text-[#9ec9ec]
+                        hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
+                        transition-all duration-300">
+                    CERTIFICATIONS
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- DESKTOP GRADIENT LINE -->
+    <div class="hidden md:block h-[3px]
+                w-full
+                bg-gradient-to-r
+                from-[#fdbfb5]
+                via-[#edabc9]
+                via-[#d6b5d4]
+                to-[#9ec9ec]">
     </div>
 
-    <div class="relative z-10">
+    </nav>
 
-    <!-- CERTIFICATIONS PAGE NAVBAR -->
-        <div id="navbar"
-        class="fixed bottom-0 md:top-0 md:bottom-auto
-        left-0 w-full z-50
-        flex justify-around md:justify-center md:gap-10
-        px-6 py-3 md:h-16
-        bg-[#1a270b]/80 backdrop-blur-md
-        border-t md:border-t-0 md:border-b border-white/10">
 
-            <!-- HOME -->
+    <!-- ========================= -->
+    <!-- MOBILE BOTTOM NAV -->
+    <!-- ========================= -->
+    <div class="fixed bottom-0 left-0 w-full flex md:hidden
+                bg-[#0b1027]/90 backdrop-blur-lg
+                border-t border-white/10
+                flex flex-col z-50">
+
+        <!-- MOBILE GRADIENT LINE (TOP OF NAV) -->
+        <div class="h-[3px]
+                    w-full
+                    bg-gradient-to-r
+                    from-[#fdbfb5]
+                    via-[#edabc9]
+                    via-[#d6b5d4]
+                    to-[#9ec9ec]">
+        </div>
+
+    <!-- ICONS -->
+        <div class="flex justify-around items-center py-3">
+
             <a href="index.html"
-            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+               class="text-white/70
+                      hover:text-[#fdbfb5]
+                      hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
+                      transition-all duration-300">
 
-                <span class="material-symbols-outlined text-[26px] md:hidden">
-                home
+                <span class="material-symbols-outlined text-2xl">
+                    home
                 </span>
-                <span class="hidden md:inline">HOME</span>
 
             </a>
 
-            <!-- ABOUT -->
             <a href="about.html"
-            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+               class="text-white/70
+                      hover:text-[#edabc9]
+                      hover:drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]
+                      transition-all duration-300">
 
-                <span class="material-symbols-outlined text-[26px] md:hidden">
-                person
+                <span class="material-symbols-outlined text-2xl">
+                    person_3
                 </span>
-                <span class="hidden md:inline">ABOUT</span>
 
             </a>
 
-            <!-- STACK -->
             <a href="stack.html"
-            class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+               class="text-white/70
+                      hover:text-[#d6b5d4]
+                      hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
+                      transition-all duration-300">
 
-                <span class="material-symbols-outlined text-[26px] md:hidden">
-                code
+                <span class="material-symbols-outlined text-2xl">
+                    code_blocks
                 </span>
-                <span class="hidden md:inline">STACK</span>
 
             </a>
 
-            <!-- CERTIFICATIONS -->
             <a href="certifications.html"
-            class="nav-link active cert flex flex-col md:flex-row items-center gap-1 md:gap-2">
+               class="text-white/70
+                      hover:text-[#9ec9ec]
+                      hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
+                      transition-all duration-300">
 
-                <span class="material-symbols-outlined text-[26px] md:hidden">
-                verified
+                <span class="material-symbols-outlined text-2xl">
+                    workspace_premium
                 </span>
-                <span class="hidden md:inline">CERTIFICATIONS</span>
 
             </a>
 
         </div>
 
-    </div>  
+    </div>
 
-        <section class="min-h-screen flex flex-col items-center px-6 pt-32 pb-20">
+<!-- ========================= -->
+<!-- PAGE -->
+<!-- ========================= -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 pb-32">
 
-        <!-- Title -->
-        <h1 class="text-center text-[28px] sm:text-[35px] md:text-[50px] font-medium tracking-[2px] text-[#ffd236]
-            drop-shadow-[0_5px_4px_rgba(0,0,0,0.5)] mb-16 md:mb-24">
+    <!-- TITLE -->
+    <div class="text-center mb-16">
 
-            MY CERTIFICATIONS
+        <h1 class="text-5xl sm:text-6xl md:text-7xl
+                   font-semibold
+                   tracking-[5px]
+                   text-[#9ec9ec]
+                   drop-shadow-[0_0_12px_rgba(158,201,236,1)]">
+
+            CERTIFICATIONS
+
         </h1>
-        
-        <!-- Grid Container -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 lg:gap-20">
-            
-        
-            <!-- Card 1 -->
-            <div class="bg-transparent hover:scale-105 transition duration-300 overflow-hidden rounded-xl hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
-            <img src="images/cert-frame-JAVA.svg"
-                onclick="openModal(this.src)"
-                alt="Java Certificate"
-                class="w-52 md:w-64 lg:w-72  mx-auto">
-            
-            <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
-                target="_blank"
-                class="block text-white text-center mt-1 font-medium">
-                Java Certificate
-            </a>
-            </div>
-        
-            <!-- Card 2 -->
-            <div class="bg-transparent hover:scale-105 transition duration-300 hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
-            <img src="images/cert-frame-WORD.svg"
-                onclick="openModal(this.src)"
-                alt="Word Certificate"
-                class="w-52 md:w-64 lg:w-72  mx-auto">
-        
-            <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
-                target="_blank"
-                class="block text-white text-center mt-1 font-medium">
-                Word Associate MS 365 Apps Certificate
-            </a>
-            </div>
-        
-            <!-- Card 3 -->
-            <div class="bg-transparent hover:scale-105 transition duration-300 hover:drop-shadow-[0_0_40px_rgba(255,255,255,0.9)]">
-            <img src="images/cert-frame-PPT.svg"
-                onclick="openModal(this.src)"
-                alt="PowerPoint Certificate"
-                class="w-52 md:w-64 lg:w-72  mx-auto">
-        
-            <a href = "https://www.certiport.com/portal/pages/credentialverification.aspx" 
-                target="_blank"
-                class="block text-white text-center mt-1 font-medium">
-                PowerPoint Associate MS 365 Apps Certificate
-            </a>        
+
+    </div>
+
+    <!-- CARDS -->
+    <div class="flex flex-wrap justify-center items-start gap-15 xl:gap-20">
+
+        <!-- WORD -->
+        <div class="cert-card
+                w-full
+                sm:w-[250px]
+                lg:w-[270px]
+                xl:w-[290px]
+                rounded-[28px]
+                bg-white/5
+                backdrop-blur-xl
+                p-6
+                flex flex-col items-center">
+
+            <!-- IMAGE -->
+            <div class="cert-img-bg cert-word w-full relative cursor-pointer">
+
+                <img src="images/cert-word.jpg"
+                     alt="Word Associate"
+
+                     onclick="openModal(this.src)"
+
+                     class="relative z-10 w-full
+                            transition duration-300
+                            hover:scale-[1.02]
+                            shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+
             </div>
 
-            
-        
+            <!-- TITLE -->
+            <h2 class="mt-14 text-[25px] font-semibold text-center text-[#fbcabb]">
+                Word Associate
+            </h2>
+
+            <p class="mt-1 tracking-[5px] text-white/50">
+                MS 365 APPS
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="flex gap-4 mt-8 w-full">
+
+                <button onclick="copyCode('eLSa-4wvo')"
+                        class="copy-btn copy-word">
+
+                    <span class="material-symbols-outlined">
+                        content_copy
+                    </span>
+
+                    CODE
+
+                </button>
+
+                <a href="https://certiport.pearsonvue.com/"
+                   target="_blank"
+                   class="verify-btn verify-word">
+
+                    VERIFY
+
+                </a>
+
+            </div>
+
         </div>
 
-        <div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
-            <img id="modalImg" class="max-w-3xl w-full rounded-lg">
+        <!-- PPT -->
+        <div class="cert-card
+                w-full
+                sm:w-[250px]
+                lg:w-[270px]
+                xl:w-[290px]
+                rounded-[28px]
+                bg-white/5
+                backdrop-blur-xl
+                p-6
+                flex flex-col items-center">
+
+            <div class="cert-img-bg cert-ppt w-full relative cursor-pointer">
+
+                <img src="images/cert-ppt.jpg"
+                     alt="PowerPoint Associate"
+
+                     onclick="openModal(this.src)"
+
+                     class="relative z-10 w-full
+                            transition duration-300
+                            hover:scale-[1.02]
+                            shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+
+            </div>
+
+            <h2 class="mt-14 text-[22px] font-semibold text-center text-[#ec9cb4]">
+                PowerPoint Associate
+            </h2>
+
+            <p class="mt-1 tracking-[5px] text-white/50">
+                MS 365 APPS
+            </p>
+
+            <div class="flex gap-4 mt-8 w-full">
+
+                <button onclick="copyCode('2CCE-Xaqa')"
+                        class="copy-btn copy-ppt">
+
+                    <span class="material-symbols-outlined">
+                        content_copy
+                    </span>
+
+                    CODE
+
+                </button>
+
+                <a href="https://certiport.pearsonvue.com/"
+                   target="_blank"
+                   class="verify-btn verify-ppt">
+
+                    VERIFY
+
+                </a>
+
+            </div>
+
         </div>
 
-        </section>
+        <!-- JAVA -->
+        <div class="cert-card
+                w-full
+                sm:w-[250px]
+                lg:w-[270px]
+                xl:w-[290px]
+                rounded-[28px]
+                bg-white/5
+                backdrop-blur-xl
+                p-6
+                flex flex-col items-center">
 
+            <div class="cert-img-bg cert-java w-full relative cursor-pointer">
 
+                <img src="images/cert-java.jpg"
+                     alt="Java Certification"
 
+                     onclick="openModal(this.src)"
 
+                     class="relative z-10 w-full
+                            transition duration-300
+                            hover:scale-[1.02]
+                            shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
 
+            </div>
 
-    <script>
-        function openModal(src) {
-            document.getElementById('modal').classList.remove('hidden');
-            document.getElementById('modalImg').src = src;
-        }
+            <h2 class="mt-14 text-[25px] font-semibold text-center text-[#89bce5]">
+                Java
+            </h2>
 
-        document.getElementById('modal').onclick = function () {
-            this.classList.add('hidden');
-        }
+            <p class="mt-1 tracking-[5px] text-white/50">
+                IT SPECIALIST
+            </p>
 
-        const navbar = document.getElementById("navbar");
+            <div class="flex gap-4 mt-8 w-full">
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 10) {
-            navbar.classList.add("shadow-[0_0_25px_rgba(34,197,94,0.4)]", "bg-[#0b2e1a]/90");
-            } else {
-            navbar.classList.remove("shadow-[0_0_25px_rgba(34,197,94,0.4)]", "bg-[#0b2e1a]/90");
-            }
-        });
-    </script>
-    </body>
+                <button onclick="copyCode('LSE9-s4Na')"
+                        class="copy-btn copy-java">
+
+                    <span class="material-symbols-outlined">
+                        content_copy
+                    </span>
+
+                    CODE
+
+                </button>
+
+                <a href="https://certiport.pearsonvue.com/"
+                   target="_blank"
+                   class="verify-btn verify-java">
+
+                    VERIFY
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- IMAGE MODAL -->
+<!-- ========================= -->
+
+<div id="imageModal"
+     onclick="closeModal()"
+     class="fixed inset-0 bg-black/80
+            hidden
+            items-center
+            justify-center
+            z-[9999]
+            p-6">
+
+    <img id="modalImage"
+         class="max-w-full max-h-full
+                rounded-xl
+                shadow-[0_0_40px_rgba(255,255,255,0.15)]">
+</div>
+<script>
+
+    function copyCode(code) {
+
+        navigator.clipboard.writeText(code);
+
+        alert("Certification code copied: " + code);
+
+    }
+
+    function openModal(src) {
+
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+
+        modalImg.src = src;
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+    }
+
+    function closeModal() {
+
+        const modal = document.getElementById("imageModal");
+
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+
+    }
+
+</script>
+
+</body>
 </html>
