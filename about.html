@@ -12,102 +12,199 @@
 
 </head>
 
-<body id="page-about" class="font-[Poppins] min-h-screen flex flex-col">
-    <section class="about-panel
-        min-h-screen
-        w-[80%]
-        mx-auto
-        px-10
-        pt-32
-        pb-20
-        grid
-        md:grid-cols-2
-        gap-12">
-
-        <h1 class="about-title md:col-span-2
-            text-center
-            text-[28px] sm:text-[35px] md:text-[50px]
-            font-medium
-            tracking-[2px]
-            text-[#ffd236]
-            drop-shadow-[0_5px_4px_rgba(0,0,0,0.5)]
-            mb-10 md:mb-16">
-
-            ABOUT ME
-        </h1>
-
-        <p class="text-justify text-[clamp(16px,2vw,20px)] leading-relaxed"> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p class="text-justify text-[clamp(16px,2vw,20px)] leading-relaxed"> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-        </p>
-
-    </section>
-
-
+<body class="main-bg text-white min-h-screen overflow-hidden">
 
     <!-- NAVBAR -->
-    <div id="navbar"
-        class="fixed bottom-0 md:top-0 md:bottom-auto
-        left-0 w-full z-50
-        flex justify-around md:justify-center md:gap-10
-        px-6 py-3 md:h-16
-        bg-[#1a270b]/80 backdrop-blur-md
-        border-t md:border-t-0 md:border-b border-white/10">
+    <nav class="w-full">
 
-        <!-- HOME -->
-        <a href="index.html"
-        class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+        <div class="max-w-7xl
+                    mx-auto
+                    px-6
+                    md:px-12
+                    py-5
+                    flex
+                    items-center
+                    justify-between">
 
-            <!-- ICON (mobile only) -->
-            <span class="material-symbols-outlined text-[26px] md:hidden ">
-                home
-            </span>
+            <!-- LOGO -->
+            <h1 class="hidden md:block text-lg font-semibold tracking-[6px]
+                    text-[#d6b5d4]
+                    drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
 
-            <!-- TEXT (desktop only) -->
-            <span class="hidden md:inline">
-                HOME
-            </span>
+                EDEN ADLAO
 
-        </a>
+            </h1>
 
-        <!-- ABOUT -->
-        <a href="about.html"
-        class="nav-link active about flex flex-col md:flex-row items-center gap-1 md:gap-2">
+            <!-- DESKTOP LINKS -->
+            <div class="hidden md:flex items-center gap-10">
 
-            <span class="material-symbols-outlined text-[26px] md:hidden ">
-            person
-            </span>
-            <span class="hidden md:inline">ABOUT</span>
+                <a href="index.html"
+                class="text-white/70 hover:text-[#fdbfb5]
+                        hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
+                        transition-all duration-300">
+                    HOME
+                </a>
 
-        </a>
+                <a href="about.html"
+                class="text-white/70 hover:text-[#edabc9]
+                        hover:drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]
+                        transition-all duration-300">
+                    ABOUT
+                </a>
 
-        <!-- STACK -->
-        <a href="stack.html"
-        class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                <a href="stack.html"
+                class="text-white/70 hover:text-[#d6b5d4]
+                        hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
+                        transition-all duration-300">
+                    STACK
+                </a>
 
-            <span class="material-symbols-outlined text-[26px] md:hidden ">
-            code
-            </span>
-            <span class="hidden md:inline">STACK</span>
+                <a href="certifications.html"
+                class="text-white/70 hover:text-[#9ec9ec]
+                        hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
+                        transition-all duration-300">
+                    CERTIFICATIONS
+                </a>
 
-        </a>
+            </div>
 
-        <!-- CERTIFICATIONS -->
-        <a href="certifications.html"
-        class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2">
+        </div>
 
-            <span class="material-symbols-outlined text-[26px] md:hidden ">
-            verified
-            </span>
-            <span class="hidden md:inline">CERTIFICATIONS</span>
+        <!-- DESKTOP GRADIENT LINE (BOTTOM) -->
+        <div class="hidden md:block h-[3px]
+                    w-full
+                    bg-gradient-to-r
+                    from-[#fdbfb5]
+                    via-[#edabc9]
+                    via-[#d6b5d4]
+                    to-[#9ec9ec]">
+        </div>
 
-        </a>
+    </nav>
+
+
+    <!-- ========================= -->
+    <!-- MOBILE BOTTOM NAV -->
+    <!-- ========================= -->
+    <div class="fixed bottom-0 left-0 w-full md:hidden
+                bg-[#0b1027]/90 backdrop-blur-lg
+                border-t border-white/10
+                flex flex-col z-50">
+
+        <!-- MOBILE GRADIENT LINE (TOP OF NAV) -->
+        <div class="h-[3px]
+                    w-full
+                    bg-gradient-to-r
+                    from-[#fdbfb5]
+                    via-[#edabc9]
+                    via-[#d6b5d4]
+                    to-[#9ec9ec]">
+        </div>
+
+        <!-- ICONS -->
+        <div class="flex justify-around items-center py-3">
+
+            <a href="index.html"
+            class="text-white/70 hover:text-[#fdbfb5]
+                    hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    home
+                </span>
+
+            </a>
+
+            <a href="about.html"
+            class="text-white/70 hover:text-[#edabc9]
+                    hover:drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    person_3
+                </span>
+
+            </a>
+
+            <a href="stack.html"
+            class="text-white/70 hover:text-[#d6b5d4]
+                    hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    code_blocks
+                </span>
+
+            </a>
+
+            <a href="certifications.html"
+            class="text-white/70 hover:text-[#9ec9ec]
+                    hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
+                    transition-all duration-300">
+
+                <span class="material-symbols-outlined text-2xl">
+                    workspace_premium
+                </span>
+
+            </a>
+
+        </div>
 
     </div>
+    
+
+    <!-- ABOUT SECTION -->
+    <section class="flex flex-col items-center pt-20 px-6 md:px-10 pb-24">
+
+        <!-- TITLE -->
+        <h2 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-[5px] mb-16
+                text-[#edabc9]
+                drop-shadow-[0_0_12px_rgba(237,171,201,1)]">
+
+            ABOUT ME
+
+        </h2>
+
+        <!-- CONTENT -->
+        <div class="flex flex-col md:flex-row gap-10 md:gap-16 max-w-6xl w-full">
+
+            <!-- PARAGRAPH 1 (TOP ON MOBILE) -->
+            <div class="text-[16px] md:text-[20px]
+                        leading-relaxed
+                        text-justify
+                        text-white/80
+                        max-w-xl">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                </p>
+
+            </div>
+
+            <!-- PARAGRAPH 2 (BOTTOM ON MOBILE) -->
+            <div class="text-[16px] md:text-[20px]
+                        leading-relaxed
+                        text-justify
+                        text-white/80
+                        max-w-xl">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 </html>
