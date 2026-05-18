@@ -15,182 +15,107 @@
 <body class="main-bg text-white min-h-screen overflow-hidden">
 
     <!-- NAVBAR -->
-<nav class="w-full">
+    <nav class="w-full">
 
-    <div class="max-w-7xl
-                mx-auto
-                px-6
-                md:px-12
-                py-5
-                flex
-                items-center
-                justify-between">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
 
-        <!-- LOGO -->
-        <h1 class="hidden md:block text-lg font-semibold tracking-[6px]
-                text-[#d6b5d4]
-                drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
+            <!-- LOGO -->
+            <h1 class="hidden md:block text-lg font-semibold tracking-[6px] text-[#d6b5d4] drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
+                EDEN ADLAO
+            </h1>
 
-            EDEN ADLAO
+            <!-- DESKTOP LINKS -->
+            <div class="hidden md:flex items-center gap-10">
 
-        </h1>
+                <a href="index.html" class="text-white/70 hover:text-[#fdbfb5] hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)] transition-all duration-300">
+                    HOME
+                </a>
 
-        <!-- DESKTOP LINKS -->
-        <div class="hidden md:flex items-center gap-10">
+                <!-- ACTIVE PAGE -->
+                <a href="about.html" class="text-[#edabc9] drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]">
+                    ABOUT
+                </a>
 
-            <a href="index.html"
-            class="text-white/70 hover:text-[#fdbfb5]
-                    hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
-                    transition-all duration-300">
-                HOME
+                <a href="stack.html" class="text-white/70 hover:text-[#d6b5d4] hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)] transition-all duration-300">
+                    STACK
+                </a>
+                
+                <a href="certifications.html" class="text-white/70 hover:text-[#9ec9ec] hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)] transition-all duration-300">
+                    CERTIFICATIONS
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- DESKTOP GRADIENT LINE -->
+        <div class="hidden md:block h-[3px] w-full bg-gradient-to-r from-[#fdbfb5] via-[#edabc9] via-[#d6b5d4] to-[#9ec9ec]"></div>
+
+    </nav>
+
+    <!-- MOBILE BOTTOM NAV -->
+    <div class="fixed bottom-0 left-0 w-full md:hidden g-[#0b1027]/90 backdrop-blur-lg border-t border-white/10 flex flex-col z-50">
+
+        <!-- MOBILE GRADIENT LINE -->
+        <div class="h-[3px] w-full bg-gradient-to-r from-[#fdbfb5] via-[#edabc9] via-[#d6b5d4] to-[#9ec9ec]"></div>
+
+        <!-- ICONS -->
+        <div class="flex justify-around items-center py-3">
+
+            <a href="index.html" class="text-white/70 hover:text-[#fdbfb5] hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)] transition-all duration-300">
+                <span class="material-symbols-outlined text-2xl">
+                    home
+                </span>
             </a>
 
             <!-- ACTIVE PAGE -->
-            <a href="about.html"
-            class="text-[#edabc9]
-                    drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]">
-                ABOUT
+            <a href="about.html" class="text-[#edabc9] drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]">
+                <span class="material-symbols-outlined text-2xl">
+                    person_3
+                </span>
             </a>
 
-            <a href="stack.html"
-            class="text-white/70 hover:text-[#d6b5d4]
-                    hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
-                    transition-all duration-300">
-                STACK
+            <a href="stack.html" class="text-white/70 hover:text-[#d6b5d4] hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)] transition-all duration-300">
+                <span class="material-symbols-outlined text-2xl">
+                    code_blocks
+                </span>
             </a>
+
             
-            <a href="certifications.html"
-            class="text-white/70 hover:text-[#9ec9ec]
-                    hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
-                    transition-all duration-300">
-                CERTIFICATIONS
+            <a href="certifications.html" class="text-white/70 hover:text-[#9ec9ec] hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)] transition-all duration-300">
+                <span class="material-symbols-outlined text-2xl">
+                    workspace_premium
+                </span>
             </a>
 
         </div>
 
     </div>
-
-    <!-- DESKTOP GRADIENT LINE -->
-    <div class="hidden md:block h-[3px]
-                w-full
-                bg-gradient-to-r
-                from-[#fdbfb5]
-                via-[#edabc9]
-                via-[#d6b5d4]
-                to-[#9ec9ec]">
-    </div>
-
-</nav>
-
-<!-- ========================= -->
-<!-- MOBILE BOTTOM NAV -->
-<!-- ========================= -->
-<div class="fixed bottom-0 left-0 w-full md:hidden
-            bg-[#0b1027]/90 backdrop-blur-lg
-            border-t border-white/10
-            flex flex-col z-50">
-
-    <!-- MOBILE GRADIENT LINE -->
-    <div class="h-[3px]
-                w-full
-                bg-gradient-to-r
-                from-[#fdbfb5]
-                via-[#edabc9]
-                via-[#d6b5d4]
-                to-[#9ec9ec]">
-    </div>
-
-    <!-- ICONS -->
-    <div class="flex justify-around items-center py-3">
-
-        <a href="index.html"
-        class="text-white/70 hover:text-[#fdbfb5]
-                hover:drop-shadow-[0_0_10px_rgba(253,191,181,0.9)]
-                transition-all duration-300">
-
-            <span class="material-symbols-outlined text-2xl">
-                home
-            </span>
-
-        </a>
-
-        <!-- ACTIVE PAGE -->
-        <a href="about.html"
-        class="text-[#edabc9]
-                drop-shadow-[0_0_10px_rgba(237,171,201,0.9)]">
-
-            <span class="material-symbols-outlined text-2xl">
-                person_3
-            </span>
-
-        </a>
-
-        <a href="stack.html"
-        class="text-white/70 hover:text-[#d6b5d4]
-                hover:drop-shadow-[0_0_10px_rgba(214,181,212,0.9)]
-                transition-all duration-300">
-
-            <span class="material-symbols-outlined text-2xl">
-                code_blocks
-            </span>
-
-        </a>
-
-        
-        <a href="certifications.html"
-        class="text-white/70 hover:text-[#9ec9ec]
-                hover:drop-shadow-[0_0_10px_rgba(158,201,236,0.9)]
-                transition-all duration-300">
-
-            <span class="material-symbols-outlined text-2xl">
-                workspace_premium
-            </span>
-
-        </a>
-
-    </div>
-
-</div>
     
 
     <!-- ABOUT SECTION -->
     <section class="flex flex-col items-center pt-20 px-6 md:px-10 pb-24">
 
         <!-- TITLE -->
-        <h2 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-[5px] mb-16
-                text-[#edabc9] drop-shadow-[0_0_12px_rgba(237,171,201,1)]">
-
+        <h2 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-[5px] mb-16 text-[#edabc9] drop-shadow-[0_0_12px_rgba(237,171,201,1)]">
             ABOUT ME
-
         </h2>
 
         <!-- CONTENT -->
         <div class="flex flex-col md:flex-row gap-10 md:gap-16 max-w-6xl w-full">
 
             <!-- PARAGRAPH 1 (TOP ON MOBILE) -->
-            <div class="flex-1
-                text-[16px] md:text-[20px]
-                leading-relaxed
-                text-justify
-                text-white/80">
-
+            <div class="flex-1 text-[16px] md:text-[20px] leading-relaxed text-justify text-white/80">
                 <p>
                     I have always had a deep passion for arts, particularly painting. Over the years, I’ve grab every opportunity to apply this creativity, and as an IT student, I’ve found it to be a surprising advantage. My background in art gives me a unique edge in UI/UX design and front-end development, allowing me to bridge the gap between aesthetics and code.
                 </p>
-
             </div>
 
             <!-- PARAGRAPH 2 (BOTTOM ON MOBILE) -->
-            <div class="flex-1
-                text-[16px] md:text-[20px]
-                leading-relaxed
-                text-justify
-                text-white/80">
-
+            <div class="flex-1 text-[16px] md:text-[20px] leading-relaxed text-justify text-white/80">
                 <p>
                     I am actively pursuing a career in front-end development, excited by the challenge of executing creative ideas in a technical space. While my primary focus is on the user-facing side of tech, I also enjoy the logic and structure of the backend, making database management a strong secondary area of interest.
                 </p>
-
             </div>
 
         </div>

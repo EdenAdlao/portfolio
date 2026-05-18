@@ -16,26 +16,14 @@
 
 <body class="main-bg text-white min-h-screen pb-24 md:pb-0 overflow-x-hidden">
     
-
     <!-- NAVBAR -->
     <nav class="w-full">
 
-        <div class="max-w-7xl
-                    mx-auto
-                    px-6
-                    md:px-12
-                    py-5
-                    flex
-                    items-center
-                    justify-between">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
 
             <!-- LOGO -->
-            <h1 class="hidden md:block text-lg font-semibold tracking-[6px]
-                    text-[#d6b5d4]
-                    drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
-
+            <h1 class="hidden md:block text-lg font-semibold tracking-[6px] text-[#d6b5d4] drop-shadow-[0_0_10px_rgba(243,204,189,0.4)]">
                 EDEN ADLAO
-
             </h1>
 
             <!-- DESKTOP LINKS -->
@@ -73,36 +61,17 @@
 
         </div>
 
-        <!-- DESKTOP GRADIENT LINE -->
-    <div class="hidden md:block h-[3px]
-                w-full
-                bg-gradient-to-r
-                from-[#fdbfb5]
-                via-[#edabc9]
-                via-[#d6b5d4]
-                to-[#9ec9ec]">
-    </div>
+        <div class="hidden md:block h-[3px] w-full bg-gradient-to-r from-[#fdbfb5] via-[#edabc9] via-[#d6b5d4] to-[#9ec9ec]"></div>
+
 
     </nav>
 
 
-    <!-- ========================= -->
     <!-- MOBILE BOTTOM NAV -->
-    <!-- ========================= -->
-    <div class="fixed bottom-0 left-0 w-full flex md:hidden
-                bg-[#0b1027]/90 backdrop-blur-lg
-                border-t border-white/10
-                flex flex-col z-50">
+    <div class="fixed bottom-0 left-0 w-full md:hidden g-[#0b1027]/90 backdrop-blur-lg border-t border-white/10 flex flex-col z-50">
 
         <!-- MOBILE GRADIENT LINE (TOP OF NAV) -->
-        <div class="h-[3px]
-                    w-full
-                    bg-gradient-to-r
-                    from-[#fdbfb5]
-                    via-[#edabc9]
-                    via-[#d6b5d4]
-                    to-[#9ec9ec]">
-        </div>
+        <div class="h-[3px] w-full bg-gradient-to-r from-[#fdbfb5] via-[#edabc9] via-[#d6b5d4] to-[#9ec9ec]"></div>
 
     <!-- ICONS -->
         <div class="flex justify-around items-center py-3">
@@ -202,7 +171,7 @@
                 <img src="images/cert-word.jpg"
                      alt="Word Associate"
 
-                     onclick="openModal(this.src)"
+                     onclick="openModal(this.src, 'Word Associate')"
 
                      class="relative z-10 w-full
                             transition duration-300
@@ -212,7 +181,7 @@
             </div>
 
             <!-- TITLE -->
-            <h2 class="mt-14 text-[25px] font-semibold text-center text-[#fbcabb]">
+            <h2 class="mt-10 text-[25px] font-semibold text-center text-[#fbcabb]">
                 Word Associate
             </h2>
 
@@ -221,18 +190,7 @@
             </p>
 
             <!-- BUTTONS -->
-            <div class="flex gap-4 mt-8 w-full">
-
-                <button onclick="copyCode('eLSa-4wvo')"
-                        class="copy-btn copy-word">
-
-                    <span class="material-symbols-outlined">
-                        content_copy
-                    </span>
-
-                    CODE
-
-                </button>
+            <div class="flex gap-4 mt-5 w-full">
 
                 <a href="https://www.certiport.com/portal/pages/credentialverification.aspx"
                    target="_blank"
@@ -243,6 +201,10 @@
                 </a>
 
             </div>
+
+            <p class="mt-3 text-[16px] text-[#fbcabb]/80">
+                code: eLSa - 4wvo
+            </p>
 
         </div>
 
@@ -263,7 +225,7 @@
                 <img src="images/cert-ppt.jpg"
                      alt="PowerPoint Associate"
 
-                     onclick="openModal(this.src)"
+                     onclick="openModal(this.src, 'PowerPoint Associate')"
 
                      class="relative z-10 w-full
                             transition duration-300
@@ -272,7 +234,7 @@
 
             </div>
 
-            <h2 class="mt-14 text-[22px] font-semibold text-center text-[#ec9cb4]">
+            <h2 class="mt-10 text-[22px] font-semibold text-center text-[#ec9cb4]">
                 PowerPoint Associate
             </h2>
 
@@ -280,18 +242,7 @@
                 MS 365 APPS
             </p>
 
-            <div class="flex gap-4 mt-8 w-full">
-
-                <button onclick="copyCode('2CCE-Xaqa')"
-                        class="copy-btn copy-ppt">
-
-                    <span class="material-symbols-outlined">
-                        content_copy
-                    </span>
-
-                    CODE
-
-                </button>
+            <div class="flex gap-4 mt-5 w-full">
 
                 <a href="https://www.certiport.com/portal/pages/credentialverification.aspx"
                    target="_blank"
@@ -302,6 +253,10 @@
                 </a>
 
             </div>
+
+            <p class="mt-3 text-[16px] text-[#ec9cb4]/80">
+                code: 2CCE - Xaqa
+            </p>
 
         </div>
 
@@ -322,7 +277,7 @@
                 <img src="images/cert-java.jpg"
                      alt="Java Certification"
 
-                     onclick="openModal(this.src)"
+                     onclick="openModal(this.src, 'Java Certification')"
 
                      class="relative z-10 w-full
                             transition duration-300
@@ -331,7 +286,7 @@
 
             </div>
 
-            <h2 class="mt-14 text-[25px] font-semibold text-center text-[#89bce5]">
+            <h2 class="mt-10 text-[25px] font-semibold text-center text-[#89bce5]">
                 Java
             </h2>
 
@@ -339,28 +294,17 @@
                 IT SPECIALIST
             </p>
 
-            <div class="flex gap-4 mt-8 w-full">
 
-                <button onclick="copyCode('LSE9-s4Na')"
-                        class="copy-btn copy-java">
-
-                    <span class="material-symbols-outlined">
-                        content_copy
-                    </span>
-
-                    CODE
-
-                </button>
-
-                <a href="https://www.certiport.com/portal/pages/credentialverification.aspx"
-                   target="_blank"
-                   class="verify-btn verify-java">
-
+            <div class="flex gap-4 mt-5 w-full">
+                <a href="https://www.certiport.com/portal/pages/credentialverification.aspx" target="_blank" class="verify-btn verify-java">
                     VERIFY
-
                 </a>
 
             </div>
+
+            <p class="mt-3 text-[16px] text-[#89bce5]/80">
+                code: LSE9 - s4Na
+            </p>
 
         </div>
 
@@ -372,52 +316,10 @@
 <!-- IMAGE MODAL -->
 <!-- ========================= -->
 
-<div id="imageModal"
-     onclick="closeModal()"
-     class="fixed inset-0 bg-black/80
-            hidden
-            items-center
-            justify-center
-            z-[9999]
-            p-6">
 
-    <img id="modalImage"
-         class="max-w-full max-h-full
-                rounded-xl
-                shadow-[0_0_40px_rgba(255,255,255,0.15)]">
-</div>
-<script>
 
-    function copyCode(code) {
-
-        navigator.clipboard.writeText(code);
-
-        alert("Certification code copied: " + code);
-
-    }
-
-    function openModal(src) {
-
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-
-        modalImg.src = src;
-
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-
-    }
-
-    function closeModal() {
-
-        const modal = document.getElementById("imageModal");
-
-        modal.classList.remove("flex");
-        modal.classList.add("hidden");
-
-    }
-
-</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js" defer> </script>
 
 </body>
 </html>
